@@ -31,10 +31,10 @@ app.post('/api/notes', (req, res) => {
         text,
         note_id: uuid()
     }
-
     oldNote.push(newNote);
     fs.writeFileSync('./db/db.json', JSON.stringify(oldNote, null, 2));
-    }  else{
+    } 
+     else{
         console.log(err)
         }
 })
